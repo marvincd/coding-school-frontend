@@ -1,32 +1,35 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Marvcademy</a>
+    <div class="container-fluid overlay">
+      <a class="navbar-brand white-text" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Marvcademy</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Courses</a>
+          <li class="nav-item d-flex">
+            <app-icon class="p-2"></app-icon>
+            <a class="nav-link align-self-end white-text p-2" routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">Courses</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown card-space d-flex">
+            <app-icon class="p-2"></app-icon>
+            <a class="nav-link align-self-end dropdown-toggle white-text p-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Cards
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Tutor contacts</a></li>
-              <li><a class="dropdown-item" href="#">Create a card</a></li>
+              <li><a class="dropdown-item white-text" href="#">Tutor contacts</a></li>
+              <li><a class="dropdown-item white-text" href="#">Create a card</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">back</a></li>
+              <li><a class="dropdown-item white-text" href="#">back</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
+          <li class="nav-item d-flex">
+            <app-icon class="p-2"></app-icon>
+            <a class="nav-link align-self-end white-text p-2" href="#">About us</a>
           </li>
         </ul>
         <div class="d-flex">
-          <button class="btn btn-link">Sign In</button>
-          <button class="btn btn-outline-success" type="submit">Sign up for free</button>
+          <button class="btn btn-lg white-text " routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Sign In</button>
+          <button class="btn btn-outline-success white-text sign-up" routerLink="/sign_up" routerLinkActive="active" ariaCurrentWhenActive="page">Sign up for free</button>
         </div>
       </div>
     </div>

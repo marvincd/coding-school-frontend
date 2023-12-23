@@ -10,11 +10,17 @@ import { FormatableCardsComponent } from './shared_components/formatable-cards/f
 import { GreySingleCharacterCardComponent } from './shared_components/grey-single-character-card/grey-single-character-card.component';
 import { BlueMultiCharacterCardComponent } from './shared_components/blue-multi-character-card/blue-multi-character-card.component';
 import { CourseCardComponent } from './shared_components/course-card/course-card.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeedbackIllustrationComponent } from './shared_components/feedback-illustration/feedback-illustration.component';
 import { InstructionIllustrationComponent } from './shared_components/instruction-illustration/instruction-illustration.component';
 import { NavBarComponent } from './shared_components/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared_components/footer/footer.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CourseProgressComponent } from './pages/dashboard/course-progress/course-progress.component';
+import { CourseComponent } from './pages/course/course.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { VirtualCardsComponent } from './pages/virtual-cards/virtual-cards.component';
+import { IconComponent } from './shared_components/nav-bar/icon/icon.component';
 
 
 @NgModule({
@@ -30,15 +36,24 @@ import { FooterComponent } from './shared_components/footer/footer.component';
     FeedbackIllustrationComponent,
     InstructionIllustrationComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    CourseProgressComponent,
+    CourseComponent,
+    ProfileComponent,
+    VirtualCardsComponent,
+    IconComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    NgbCarouselModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    NgbCarouselModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

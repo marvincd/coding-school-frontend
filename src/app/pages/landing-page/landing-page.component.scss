@@ -1,10 +1,61 @@
-.footer-container{
-  background-color: #2E2E2E;
-  color: white;
+.opening-section{
+    background:linear-gradient(270deg, #4632F5 0.26%, #5185EF 99.75%) !important;
+    color: #fff !important;
+    height: 100vh !important;
+    padding-top: 26vh !important;
+    margin-bottom: 0px !important;
 }
-.white-text{
-  color: white;
+
+.learn-now{
+    margin-top: 2vw;
+    border-radius: 60px;
+    background: #FFF;
+    width: 20vw;
+    height: 6vh;
+    padding: 6px 14px;
 }
-.black-text{
-  color: rgb(0, 0, 0);
+
+.illustration{
+    margin-left: 6vw !important;
+}
+
+.info h1{
+    font-size: 4vw;
+    width: 42vw;
+}
+
+.closing{
+    margin-top: 6vw;
+    font-size: 2vw;
+}
+.icon{
+    margin: 2vh 2vw;
+}
+.section-label{
+    text-align: center;
+}
+.trusted-by-section{
+    background: rgba(197, 197, 197, 0.30);
+    margin-top: 0px !important;
+    padding: 10vh !important;
+}
+
+.video{
+    width: 70vw !important;
+    height: 70vh !important;
+}
+
+.start-programming{
+    color: #000;
+    text-align: center;
+    font-family: Satoshi;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.courses-section{
+    //background: var(--primary-black, #2E2E2E);
+    background-color: rgba(46, 46, 46, 1);
 }
