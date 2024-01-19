@@ -1,0 +1,42 @@
+.opening-section{
+    padding-bottom: 0px !important;
+}
+
+.content-section{
+    padding-top: 0px !important;
+}
+
+.heading{
+    color: var(--Primary-light, #5185EF);
+    font-family: Satoshi;
+    font-size: 55.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sub-heading {
+    color: #2E2E2E;
+    font-family: Satoshi;
+    font-size: 34.5px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+iframe{
+    border-radius:18px;
+    width:60vw;
+    height:60vh;
+
+   }
+.sections-nav{
+    background: #FFF;
+    box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.50);
+    padding: 3.5vh 3vw !important;
+}
+.course-title{
+    color: #4632F5;
+    font-size: 34.5px;
+}
+   

@@ -1,7 +1,27 @@
 <section>
-    <h1>Active Learning</h1>
+    <div class="input-group">
+        <input type="search" [(ngModel)]="question.prompt" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" (click)="onAsk()" class="btn btn-outline-primary" data-mdb-ripple-init>Ask</button>
+      </div>
+      <!-- <div class="col s12 m7">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Response</span>
+              <pre>
+                {{ answer }}
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <br>
+      <pre>
+        {{ answer }}
+      </pre>
+    <!-- <h1>Active Learning</h1>
     <p>Experience quality teaching</p>
-    <p>DASHBOARD</p>
+    <p>DASHBOARD</p> -->
 </section>
 <div class="d-flex flex-row mb-2">
     <div class="p-2">

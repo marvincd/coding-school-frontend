@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://ai.rnilaweera.ovh/api/v1/user/mixtral",
+      "secure": true
+    }
+  }

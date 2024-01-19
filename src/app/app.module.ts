@@ -21,6 +21,12 @@ import { CourseComponent } from './pages/course/course.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { VirtualCardsComponent } from './pages/virtual-cards/virtual-cards.component';
 import { IconComponent } from './shared_components/nav-bar/icon/icon.component';
+import { NavBarActiveComponent } from './shared_components/nav-bar-active/nav-bar-active.component';
+import { InstructorProfileComponent } from './pages/instructor-profile/instructor-profile.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { CustomInterceptor } from './custom.interceptor';
 
 
 @NgModule({
@@ -42,7 +48,10 @@ import { IconComponent } from './shared_components/nav-bar/icon/icon.component';
     CourseComponent,
     ProfileComponent,
     VirtualCardsComponent,
-    IconComponent
+    IconComponent,
+    NavBarActiveComponent,
+    InstructorProfileComponent,
+    NotFoundComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -50,8 +59,14 @@ import { IconComponent } from './shared_components/nav-bar/icon/icon.component';
     NgbModule,
     NgbCarouselModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass:CustomInterceptor,
+    multi:true
+  },
     NgbCarouselModule
   ],
   bootstrap: [AppComponent]

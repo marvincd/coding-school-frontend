@@ -1,63 +1,17 @@
 <div class="container">
-    <form >
-        <h1>Welcome back</h1>
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="form2Example1" placeholder="Email" class="form-control" />
-        </div>
-        <!-- Password input -->
-        <div class="input-group form-outline mb-4">
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Password"
-              formControlName="password"
-            />
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-eye-slash"></i>
-              </span>
-           </div>
-        </div>
-      
-        <!-- 2 column grid layout for inline styling -->
-        <div class="row mb-4">
-          <div class="col d-flex justify-content-center">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-              <label class="form-check-label" for="form2Example31"> Remember me </label>
-            </div>
-          </div>
-      
-          <div class="col">
-            <!-- Simple link -->
-            <a href="#!">Forgot password?</a>
-          </div>
-        </div>
-      
-        <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-      
-        <!-- Register buttons -->
-        <div class="text-center">
-          <p>Not a member? <a href="#!">Register</a></p>
-          <!-- <p>or sign up with:</p>
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-facebook-f"></i>
-          </button>
-      
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-google"></i>
-          </button>
-      
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-twitter"></i>
-          </button>
-      
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-github"></i>
-          </button> -->
-        </div>
-      </form>    
+  <form action="">
+    <div class="header">
+      <h1>Login to Marvcademy</h1>
+    </div>
+    <label for="">Email or Username</label>
+    <input type="email" name="EmailId" [(ngModel)]="loginObj.email" required="">
+    <label for="">Password</label>
+    <input type="password" name="Password" [(ngModel)]="loginObj.password" required="">
+    <a href="#">I forgot my password</a>
+    <input type="submit" (click)="onLogin()" value="Log In">
+  </form>
+  <div class="footer">
+    <a href="#">Not a member yet? <strong>Sign up free</strong></a>
+  </div>
 </div>
+

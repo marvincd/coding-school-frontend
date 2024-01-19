@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
 import { NavBarService } from 'src/app/services/nav-bar.service';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {  Router } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 
 
 @Component({
@@ -8,17 +11,20 @@ import { NavBarService } from 'src/app/services/nav-bar.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(public navBarService: NavBarService){
-    this.navBarService.customVariable.value.showNavbar = false;
-    this.navBarService.customVariable.next({
-      showNavbar: false
-    });
-  }
+  loginObj: any = {
+    "email": "",
+    "password": ""
+  };
+  constructor(private auth: AuthService, private router: Router){}
+
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.navBarService.customVariable.next({
-      showNavbar: false
-    });
+    if (this.auth.isLoggedIn()) {
+      this.router.navigateByUrl('/dashboard'); 
+    }
+  }
+  onLogin() {
+    // debugger;
+    console.log(this.loginObj);
+    this.auth.login(this.loginObj);
   }
 }
