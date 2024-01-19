@@ -1,34 +1,19 @@
 <div class="container">
     <form >
-        <h1>Welcome to marvcademy</h1>
-        <!-- Email input --> 
-        <div class="form-outline mb-4">
-          <input type="email" id="formEmail" placeholder="Email" class="form-control" />
-          <br>
-          <input type="email" id="formFirstName" placeholder="First name" class="form-control" />
-          <br>
-          <input type="email" id="formSecondName" placeholder="Last name" class="form-control" />
-        </div>
-        <!-- Password input -->
-        <div class="input-group form-outline mb-4">
-            <input
-              type="password"
-              class="form-control password"
-              placeholder="Password"
-              formControlName="password"
-            />
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Confirm Password"
-              formControlName="password"
-            />
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-eye-slash"></i>
-              </span>
-           </div>
-        </div>
+    <h1>Welcome to marvcademy</h1>
+    <!-- Email input -->
+    <label for="">Username</label>
+    <input type="username" name="UsernameId" [(ngModel)]="signInObj.username" required="">
+    <label for="">Email</label>
+    <input type="email" name="EmailId" [(ngModel)]="signInObj.email" required="">
+    <label for="">Password</label>
+    <input type="password" name="Password" [(ngModel)]="signInObj.password" required="">
+    <label for="">Confirm password</label>
+    <input type="password" name="Password" [(ngModel)]="newPassword" required="">
+    <div class="alert alert-danger error" role="alert" *ngIf="mismatch">
+      Error: Password does'nt match
+    </div>
+        
       
         <!-- 2 column grid layout for inline styling -->
           <div class="justify-content-center">
@@ -44,11 +29,11 @@
           </div>
       
         <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4">Sign up</button>
+        <input type="submit" (click)="onSignUp()" value="Sign Up">
       
         <!-- Register buttons -->
         <div class="text-center">
-          <p>Already have an account? <a href="#!">Register</a></p>
+          <p>Already have an account? <a routerLink="/login" routerLinkActive="active">Login</a></p>
           <!-- <p>or sign up with:</p>
           <button type="button" class="btn btn-link btn-floating mx-1">
             <i class="fab fa-facebook-f"></i>

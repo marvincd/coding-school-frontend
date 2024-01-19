@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavBarService } from './services/nav-bar.service';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,6 @@ import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Rout
 export class AppComponent {
   title = 'coding_school';
   loading = false;
-  constructor(public router: Router) {
-    this.router.events.subscribe(ev => {
-      if (ev instanceof NavigationStart) {
-        this.loading = true;
-      }
-      if (ev instanceof NavigationEnd || ev instanceof NavigationCancel || ev instanceof NavigationError) {
-        this.loading = false;
-      }
-    });
-
-  }
-
+  constructor(private auth: AuthService, private router: Router){}
+  
 }
