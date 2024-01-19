@@ -21,10 +21,14 @@ export class LoginComponent {
     if (this.auth.isLoggedIn()) {
       this.router.navigateByUrl('/dashboard'); 
     }
+    localStorage.setItem('authenticating', "true");
   }
   onLogin() {
     // debugger;
     console.log(this.loginObj);
     this.auth.login(this.loginObj);
+  }
+  ngOnDestroy(){
+    localStorage.setItem('authenticating', "false");
   }
 }
