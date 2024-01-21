@@ -345,7 +345,7 @@ margin-top: 1.5rem;
     .course-card{
         display: flex;
         flex-direction: column;
-        height: 33rem;
+        height: 23rem;
         border-bottom-left-radius: 18px;
         border-bottom-right-radius: 18px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.74) 0%, #DFDFDF 100%);
@@ -408,7 +408,14 @@ margin-top: 1.5rem;
 
 .new-course{
     img{
-        height: 32.7rem;
+        height: 26.7rem;
         cursor: pointer;
     }
+}
+
+.course-form{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }

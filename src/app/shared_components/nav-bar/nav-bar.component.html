@@ -34,3 +34,47 @@
       </div>
     </div>
 </nav>
+
+
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" *ngIf="loggedin">
+  <div class="container-fluid overlay">
+    <a class="navbar-brand white-text" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Marvcademy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <div class="nav-item d-flex">
+          <app-icon class="p-2"></app-icon>
+          <a class="nav-link align-self-end white-text p-2" routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a>
+      </div>
+      <div class="d-flex">
+        <button class="btn btn-outline-success white-text sign-up" >My account</button>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top " >
+  <div class="container-fluid overlay">
+    <a class="navbar-brand white-text" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Marvcademy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="dashboard nav-item d-flex">
+          <app-icon class="p-2"></app-icon>
+          <a class="nav-link align-self-end white-text p-2 " routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <a class="white-text nav-link " routerLink="/profile" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <svg class="p-2" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.7722 17.0316C16.6796 17.0184 16.5606 17.0184 16.4547 17.0316C14.127 16.9523 12.2754 15.0477 12.2754 12.7068C12.2754 10.3129 14.2064 8.36871 16.6135 8.36871C19.0073 8.36871 20.9515 10.3129 20.9515 12.7068C20.9383 15.0477 19.0999 16.9523 16.7722 17.0316Z" stroke="white" stroke-width="1.5871" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25.5271 25.7606C23.1729 27.9164 20.0516 29.2258 16.6129 29.2258C13.1742 29.2258 10.0529 27.9164 7.69873 25.7606C7.83099 24.5174 8.62454 23.3006 10.0397 22.3484C13.6636 19.9413 19.5887 19.9413 23.1861 22.3484C24.6013 23.3006 25.3949 24.5174 25.5271 25.7606Z" stroke="white" stroke-width="1.5871" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.613 29.2258C23.9174 29.2258 29.8388 23.3044 29.8388 16C29.8388 8.6956 23.9174 2.7742 16.613 2.7742C9.3086 2.7742 3.38721 8.6956 3.38721 16C3.38721 23.3044 9.3086 29.2258 16.613 29.2258Z" stroke="white" stroke-width="1.5871" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>My account</a>
+      </div>
+    </div>
+  </div>
+</nav>

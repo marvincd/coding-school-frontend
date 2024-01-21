@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { defineComponents, IgcRatingComponent } from 'igniteui-webcomponents';
 
 defineComponents(IgcRatingComponent);
@@ -10,6 +10,7 @@ defineComponents(IgcRatingComponent);
 })
 export class CourseCardComponent {
   ratingVal:number = 4;
+  @Input() course= "../../../assets/css video thumbnail 1.png"
 ratingChanged($event: CustomEvent<number>) {
   this.ratingVal = 4;
 }

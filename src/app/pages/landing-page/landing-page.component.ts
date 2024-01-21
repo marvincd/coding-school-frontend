@@ -8,4 +8,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class LandingPageComponent {
   programming:string = 'pr</>gramming';
+  path1 = '../../../assets/Screen Shot 2023-09-11 at 17.58 2.png';
+  path3 = '../../../assets/Group 33797.png';
+  path4 = '../../../assets/Screen Shot 2023-09-11 at 18.00 2.png';
+
 }

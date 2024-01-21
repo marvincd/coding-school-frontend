@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign_up', component: SignUpComponent },
-  { path: 'course', canActivate: [AuthGuard], component:  CourseComponent },
+  { path: 'course/:id', component:  CourseComponent },
   { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: NotFoundComponent },
