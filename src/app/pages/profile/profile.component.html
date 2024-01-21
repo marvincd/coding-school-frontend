@@ -1,14 +1,14 @@
-<div class="profile_layout">
+<section class="profile_layout">
   <div class="first_section">
     <div class="first-column">
         <div class="profile_card">
          <h2 class="profile_header">Personal details</h2>
          <img src="../../../assets/avatar.png"  alt="">
-         <h1>John Doe</h1>
-         <p>Frontend Developer Expert</p>
+         <h1>{{user?.username}}</h1>
+         <p>Newbie</p>
          <button>
             <img src="../../../assets/carbon_link.png" alt="">
-            <p>Share profile link</p>
+            <p>Upgrade account</p>
          </button>
         </div>
 
@@ -16,33 +16,32 @@
          <button>
             <div class="cert">
                 <img src="../../../assets/document-text.png" alt="">
-                <p>marvcertificate.pdf</p>
+                <p>Video courses</p>
             </div>
             <img src="../../../assets/check-green.png" alt="">
          </button>
          <button>
             <div class="cert">
                 <img src="../../../assets/document-text.png" alt="">
-                <p>marvcertificate.pdf</p>
+                <p>Audio courses</p>
             </div>
             <img src="../../../assets/check-green.png" alt="">
          </button>
        
-         <h2>Curriculum Vitae</h2>
+         <h2>Next tier</h2>
          <button class="upload-button">
             <div class="cert">
                 <img src="../../../assets/document.png" alt="">
-                <p>marvicv.pdf</p>
+                <p>Multiple sections</p>
             </div>
-            <img src="../../../assets/check-white.png" alt="">
+            <!-- <img src="../../../assets/check-white.png" alt=""> -->
          </button>
-         <h2>Identification</h2>
          <button class="upload-button">
             <div class="cert">
                 <img src="../../../assets/document.png" alt="">
-                <p>marvicv.pd</p>
+                <p>Monetization</p>
             </div>
-            <img src="../../../assets/check-white.png" alt="">
+            <!-- <img src="../../../assets/check-white.png" alt=""> -->
          </button>
         </div>
 
@@ -52,35 +51,33 @@
            <div class="personal-info">
                <div class="personal-info-container">
                    <h2>Personal Info</h2>
-                   <img src="../../../assets/edit.png" alt="">
+                   <!-- <img src="../../../assets/edit.png" alt=""> -->
                </div>
                <div class="details">
                    <div class="name">
                       <h2>Name</h2>
-                      <p>John Doe</p>
+                      <p>{{user?.username}}</p>
                    </div>
    
                    <div class="name">
                        <h2>Email</h2>
-                       <p>johndoe@gmail.com</p>
+                       <p>{{user?.email}}</p>
                    </div>
                </div>
    
            </div>
            <div class="personal-info">
                <div class="personal-info-container">
-                   <h2>Password</h2>
-                   <img src="../../../assets/edit.png" alt="">
+                   <h2>Unique identifier</h2>
+                   <!-- <img src="../../../assets/edit.png" alt=""> -->
                </div>
                <div class="details">
                    <div class="name">
-                      <h2>Old Password</h2>
-                      <p>***********</p>
+                      <h2>User Id</h2>
+                      <p>{{user?._id}}</p>
                    </div>
    
                    <div class="name">
-                       <h2>New Password</h2>
-                       <p>New Password</p>
                    </div>
                </div>
    
@@ -88,12 +85,11 @@
            <div class="personal-info">
                <div class="personal-info-container">
                    <h2>Contact</h2>
-                   <img src="../../../assets/edit.png" alt="">
+                   <!-- <img src="../../../assets/edit.png" alt=""> -->
                </div>
                <div class="details">
                    <div class="name">
-               
-                      <p>+234 456 878 0897</p>
+                      <p>{{user?.email}}</p>
                    </div>
    
                </div>
@@ -101,13 +97,13 @@
            </div>
            <div class="personal-info">
                <div class="personal-info-container">
-                   <h2>Address</h2>
-                   <img src="../../../assets/edit.png" alt="">
+                   <h2>Country</h2>
+                   <!-- <img src="../../../assets/edit.png" alt=""> -->
                </div>
                <div class="details">
                    <div class="name">
                 
-                      <p>Lagos, Nigeria</p>
+                      <p>Nigeria</p>
                    </div>
    
                </div>
@@ -116,9 +112,9 @@
         </div>
 
         <div class="about-card">
-          <h2>About Me</h2>
-          <p>I'm a frontend enthusiast with expertise in HTML, CSS, and JavaScript. I'm dedicated to crafting seamless user experiences through elegant design and clean code. I thrive on turning ideas into engaging web solutions.</p>
-          <img src="../../../assets/edit.png" alt="">
+          <h2>Newbie </h2>
+          <p>Newbies are allowed to create only free courses, with a video hosted on a free video hosting platform like youtube and a podcast or audio</p>
+          <!-- <img src="../../../assets/edit.png" alt=""> -->
         </div>
          <h1 class="title">Experience</h1>
         <div class="experience-card">
@@ -128,13 +124,13 @@
                     <p>Add your past work experience here. If you’re just starting out, you can add internships or volunteer experience instead.</p>
                  </div>
                  <button>
-                    Add work experience 
+                    Coming soon 
                  </button>
             </div>
           
         
         </div>
-        <div class="experience-card2">
+        <!-- <div class="experience-card2">
             <div class="ex-card-layout2">
                  <h2>TechSolutions Inc.     -     Frontend Developer    |      June 2022 - Present </h2>
                  <p>As a frontend developer at TechSolutions Inc., I played a pivotal role in transforming design concepts into functional and visually appealing web applications. I collaborated closely with the design team to ensure pixel-perfect implementation and utilized modern frontend technologies, such as React and SCSS, to enhance user interactivity. Additionally, I contributed to performance optimization efforts, resulting in a 20% improvement in page load times, significantly enhancing the user experience.</p>
@@ -149,7 +145,7 @@
             </div>
           
         
-        </div>
+        </div> -->
 
        
 
@@ -165,71 +161,44 @@
               <p>Add your educational background here to let employers know where you studied or are currently studying.</p>
            </div>
            <button>
-              Add Education
+            Coming soon 
            </button>
       </div>
   </div>
 
-  <div class="experience-card2">
+  <!-- <div class="experience-card2">
     <div class="ex-card-layout2">
          <h2>MASTER DEGREE    |     2020</h2>
          <p>Information Technology    -     University of Nigeria</p>
     </div>
-</div>
+</div> -->
 
 <h1 class="title">My courses</h1>
 
 <div class="course-layout">
-    <div class="course-card">
-        <img src="../../../assets/hello.png" alt="">
-     <div class="course-details" >
-       <h2>Coding for Everyone: C and C++ </h2>
-       <p>C Programming Language Family, Computer Programming, C++ Programming, Computer Science, Data..</p>
-       <div class="star-layout">
-           <div class="star">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-           </div>
-          <p > <span class="">5.0</span> (12k Students)</p>
-       </div>
-       <p>Beginner . Specialization  .  3 - 6 Months</p>
-     </div>
-    
-     <div class="status">
-     <h2>Published</h2>
-    </div>
-</div>
+  <app-course-card-profile *ngFor="let item of courses; index as i" [title]=item.name  [routerLink]="['/course',  item._id]"></app-course-card-profile>
 
-    <div class="course-card">
-        <img src="../../../assets/blue-rectangle.png" alt="">
-     <div class="course-details" >
-       <h2>The Ultimate React Course 2023</h2>
-       <p> Master modern React from beginner to advanced! Context API, React Query, Tailwind, advanced patterns</p>
-       <div class="star-layout">
-           <div class="star">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-              <img src="../../../assets/star.png" alt="">
-           </div>
-          <p > <span class="">5.0</span> (12k Students)</p>
-       </div>
-       <p>Beginner . Specialization  .  3 - 6 Months</p>
-     </div>
-    
-     <div class="status">
-     <h2>Draft</h2>
-    </div>
-</div>
 
-<div class="new-course">
+<div class="new-course" *ngIf="!inputingCourse" (click)="onInputCourse()" >
     <img src="../../../assets/new-course.png" alt="">
 </div>
+<div *ngIf="inputingCourse" class="course-form">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Course title / description</label>
+    <textarea class="form-control" [(ngModel)]="course.name" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Course video</label>
+    <input type="email" [(ngModel)]="course.video" class="form-control" id="exampleFormControlInput1" placeholder="Paste video embed link here">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Course audio</label>
+    <input type="email" [(ngModel)]="course.audio" class="form-control" id="exampleFormControlInput1" placeholder="Paste audio embed link here">
+  </div>
 
+<button type="button" (click)="onCreateCourse()" class="btn btn-primary btn-lg btn-block">Create course</button>
+</div>
+  
 </div>
 
 
@@ -276,6 +245,6 @@
           </div>
     </div>
   </div>
-</div>
+</section>
 
 <app-footer></app-footer>

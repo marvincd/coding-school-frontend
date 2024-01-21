@@ -27,6 +27,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CustomInterceptor } from './custom.interceptor';
+import { CourseCardProfileComponent } from './pages/profile/course-card-profile/course-card-profile.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { CustomInterceptor } from './custom.interceptor';
     IconComponent,
     NavBarActiveComponent,
     InstructorProfileComponent,
+    CourseCardProfileComponent,
     NotFoundComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

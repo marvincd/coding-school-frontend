@@ -15,7 +15,7 @@ export class CustomInterceptor implements HttpInterceptor {
   constructor(private auth: AuthService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    debugger;
+    // debugger;
     const token = this.auth.getToken();
     const newCloneRequest = request.clone({
       setHeaders:{
