@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  ask:string = "ask";
   lastname = "Success";
   answer = '';
   question: any = {
@@ -60,10 +61,12 @@ export class DashboardComponent {
   }
 
   onAsk() {
+    this.ask = "Generating response might take up to a minute";
     // debugger;
     console.log(this.question);
     try {
         this.http.post('https://school-project-api-pnsh.onrender.com/api/mixtral', this.question).subscribe((res:any)=>{
+        console.log(res);
         if(res.message) {
           console.log(res);
           console.log(res.message);
@@ -88,6 +91,7 @@ export class DashboardComponent {
         }
       })
     }
+    this.ask = "Ask again";
   }
   extractLink(theembed:string){
     const position =  theembed.search("src=");

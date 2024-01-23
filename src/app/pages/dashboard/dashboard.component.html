@@ -56,7 +56,7 @@
              <textarea [(ngModel)]="question.prompt" class="form-control text-area" id="exampleFormControlTextarea6" rows="3" placeholder="Paste error message or question here..."></textarea>
            </div>
            <br>
-           <button type="button" (click)="onAsk()" class="button btn">Ask</button>
+           <button type="button" (click)="onAsk()" class="button btn">{{ask}}</button>
           <br>
           <pre>
             {{ answer }}
