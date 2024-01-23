@@ -71,27 +71,31 @@ export class DashboardComponent {
           console.log(res);
           console.log(res.message);
           this.answer = res.message;
+          this.ask = "Ask";
           // localStorage.setItem('loginTOken', res.accessToken);
           // this.router.navigateByUrl('/dashboard'); 
         } else {
+          this.ask = "Ask again";
           console.log(res);
         }
       })
     } catch (error) {
+      this.ask = "Ask again";
       console.log(error);
         this.http.post('https://school-project-api-pnsh.onrender.com/api/mixtral', this.question).subscribe((res:any)=>{
         if(res.message) {
+          this.ask = "Ask again";
           console.log(res);
           console.log(res.message);
           this.answer = res.message;
           // localStorage.setItem('loginTOken', res.accessToken);
           // this.router.navigateByUrl('/dashboard'); 
         } else {
+          this.ask = "Ask again";
           console.log(res);
         }
       })
     }
-    this.ask = "Ask again";
   }
   extractLink(theembed:string){
     const position =  theembed.search("src=");
