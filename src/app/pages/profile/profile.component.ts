@@ -14,13 +14,14 @@ export class ProfileComponent {
     "video": "",
     "audio": ""
   };
+  create = "Create course";
   courses :Array<any>= [];
   user:User | undefined;
   inputingCourse:boolean = false;
   constructor(private auth: AuthService, private http: HttpClient, private router: Router){}
   ngOnInit(): void {
     console.log("making the call");
-    this.http.get('http://localhost:1000/api/users/current').subscribe((res:any)=>{
+    this.http.get('https://school-project-api-pnsh.onrender.com/api/users/current').subscribe((res:any)=>{
           console.log(res);
           this.user = res;
           // if(res._id) {
@@ -36,7 +37,7 @@ export class ProfileComponent {
           //   console.log('Failed to login');
           // }
         });
-        this.http.get('http://localhost:1000/api/courses').subscribe((res:any)=>{
+        this.http.get('https://school-project-api-pnsh.onrender.com/api/courses').subscribe((res:any)=>{
           console.log(res);
           this.courses = res;
           // if(res._id) {
@@ -53,18 +54,18 @@ export class ProfileComponent {
           // }
         });
 
-
   }
   onInputCourse(){
     this.inputingCourse = !this.inputingCourse;
   }
   onCreateCourse() {
+    this.create = "Creating course";
     // debugger;
     console.log(this.course);
     this.course.video = this.extractLink(this.course.video);
     this.course.audio = this.extractLink(this.course.audio);
     console.log(this.course);
-    this.http.post('http://localhost:1000/api/courses', this.course).subscribe((res:any)=>{
+    this.http.post('https://school-project-api-pnsh.onrender.com/api/courses', this.course).subscribe((res:any)=>{
       if(res) {
         console.log(res);
         console.log(res.message);
@@ -73,6 +74,7 @@ export class ProfileComponent {
       } else {
         console.log(res);
       }
+      this.router.navigateByUrl('/dashboard');
     })
   }
 

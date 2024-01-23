@@ -21,6 +21,7 @@ export class CourseComponent {
   // //swap the string face
   // quotePos = this.newString.search("'");
   // realString = this.newString.slice(0,this.quotePos);
+  audio:boolean = true;
   constructor(protected _sanitizer: DomSanitizer, private route: ActivatedRoute, private http: HttpClient,) {
     this.newLink = this._sanitizer.bypassSecurityTrustResourceUrl(this.embedLink);
     this.newVideoLink = this._sanitizer.bypassSecurityTrustResourceUrl(this.youtubeEmbedLink);
@@ -59,5 +60,10 @@ export class CourseComponent {
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
-  
+  toVideo() {
+    this.audio = false;
+  }
+  toAudio(){
+    this.audio = true;
+  }
 }
