@@ -16,6 +16,7 @@ export class SignUpComponent {
     "password": ""
   };
   newPassword:string = "";
+  register:string = "Sign Up";
   constructor(private auth: AuthService, private http: HttpClient, private router: Router){}
 
   ngOnInit(): void {
@@ -25,6 +26,7 @@ export class SignUpComponent {
     localStorage.setItem('authenticating', "true");
   }
   onSignUp() {
+    this.register = "Registering..."
     // debugger;
     if (this.newPassword == this.signInObj.password && this.signInObj.password != ""){
         console.log(this.signInObj);

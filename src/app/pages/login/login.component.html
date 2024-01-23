@@ -8,7 +8,7 @@
     <label for="">Password</label>
     <input type="password" name="Password" [(ngModel)]="loginObj.password" required="">
     <a href="#">I forgot my password</a>
-    <input type="submit" (click)="onLogin()" value="Log In">
+    <input type="submit" (click)="onLogin()" [value]="authenticate">
   </form>
   <div class="footer">
     <a href="#">Not a member yet? <strong>Sign up free</strong></a>

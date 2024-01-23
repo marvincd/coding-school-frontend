@@ -59,7 +59,7 @@ export class ProfileComponent {
     this.inputingCourse = !this.inputingCourse;
   }
   onCreateCourse() {
-    this.create = "Creating course";
+    this.create = "Creating course...";
     // debugger;
     console.log(this.course);
     this.course.video = this.extractLink(this.course.video);

@@ -15,6 +15,7 @@ export class LoginComponent {
     "email": "",
     "password": ""
   };
+  authenticate:string = "Login"
   constructor(private auth: AuthService, private router: Router){}
 
   ngOnInit(): void {
@@ -24,6 +25,7 @@ export class LoginComponent {
     localStorage.setItem('authenticating', "true");
   }
   onLogin() {
+    this.authenticate = "authenticating...";
     // debugger;
     console.log(this.loginObj);
     this.auth.login(this.loginObj);
