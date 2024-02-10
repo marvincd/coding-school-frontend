@@ -33,7 +33,7 @@ export class CourseComponent {
     this.sub = this.route.params.subscribe(params => {
        this.id = params['id']; // (+) converts string 'id' to a number
        console.log(this.id);
-       this.http.get('http://localhost:1000/api/courses/' + this.id).subscribe((res:any)=>{
+       this.http.get('https://school-project-api-pnsh.onrender.com/api/courses/' + this.id).subscribe((res:any)=>{
         console.log(res);
         this.title = res.name;
         this.embedLink = res.audio;
